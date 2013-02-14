@@ -2,9 +2,9 @@
 //assignment #1. an ice cream cone design while using triangle, rectangle and ellipse functions once each only
 
 import processing.pdf.*;
-float paperwidth = 8.3; //inches
-float paperheight = 11.7; 
-int enlargefactor = 60;
+float paperwidth = 8.5; //inches
+float paperheight = 11; 
+int enlargefactor = 65;
 
 void setup() {
   size( (int)paperwidth*enlargefactor, (int)paperheight*enlargefactor );
