@@ -16,7 +16,7 @@ void setup()
   RFont font = new RFont("wt006.ttf", fontSize, RFont.CENTER);
 
   // tell library we want 11px between each point on the font path
-  RCommand.setSegmentLength(8);
+  RCommand.setSegmentLength(7);
   
   // get the points on font outline.
   RGroup grp, grp0;
@@ -33,14 +33,14 @@ void setup()
   
   //first character
   pushMatrix();
-  translate(width/2-90, height/2+40); 
+  translate(width/2-80, height/2+40); 
   //because of the way typographs are displayed, we need offset to draw the grid aligned with the word 
   float offsetx = -90;
   float offsety = -160;
   // good pairs.. 24/17; 22/18; 21/17; 20/17; 13/18(pixel 11); 10/18; 9/16, 20/60, 13/50 ( pixel length 10 + 20/60), 13/18(pixel 15), 13/60(pixel 15)
   // good for 'fa'   21/12  10/10  25/23  15/30(very irregular), 20/40 , 20/60
-  int col = 13;
-  int row = 50;
+  int col = 5;
+  int row = 18;
   //grid cell width
   float w = fontSize/col;
   float h = fontSize/row;
@@ -91,12 +91,12 @@ void setup()
 
   
   // second character 
-  translate(165, 50); 
+  translate(215, 0); 
   //because of the way typographs are displayed, we need offset to draw the grid aligned with the word 
   // good pairs.. 24/17; 22/18; 21/17; 20/17; 13/18(pixel 11); 10/18; 9/16, 20/60,  ( pixel length 10 + 20/60), 13/18(pixel 15), 13/60(pixel 15)
   // good for 'fa'   21/12  10/10  25/23  15/30(very irregular), 20/40 , 20/60, 23/100
-  int col0 = 13;
-  int row0 = 50;
+  int col0 = 5;
+  int row0 = 18;
   //grid cell width
   float w0 = fontSize/col0;
   float h0 = fontSize/row0;
