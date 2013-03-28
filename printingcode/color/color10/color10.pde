@@ -31,10 +31,10 @@ void draw() {
   beginRecord(PDF, "colorportrait.pdf");
   background(0);
   
-  TColor col = ColorRange.SOFT.getColor();
-  //ReadonlyTColor coll = NamedColor.getForName("yellowgreen");
-  //TColor col = coll.copy();
-  ColorTheoryStrategy ss = new CompoundTheoryStrategy();
+ // TColor col = ColorRange.SOFT.getColor();
+  ReadonlyTColor coll = NamedColor.getForName("purple");
+  TColor col = coll.copy();
+  ColorTheoryStrategy ss = new TriadTheoryStrategy();
   ColorList backgroundlist = ColorList.createUsingStrategy(ss, col);
   backgroundlist = new ColorRange(backgroundlist).addBrightnessRange(0.6, 0.7).getColors(null, numColors, 0.9);
   backgroundlist.sortByDistance(false);
