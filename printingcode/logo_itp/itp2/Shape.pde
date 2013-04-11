@@ -35,7 +35,7 @@ class Shape {
     
     void setRotation ( float _rotate) {
       if ( selected) {
-      mrotation +=_rotate;
+      mrotation = _rotate;
       }
     }
     //check if a point is inside

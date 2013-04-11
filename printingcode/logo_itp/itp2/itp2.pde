@@ -91,11 +91,14 @@ void draw() {
     
     if (keyPressed) {
       if(key==CODED) {
+        float r = shapes[i].mrotation;
       if (keyCode == RIGHT) {
-        shapes[i].setRotation(0.01);
+        r+=0.01;
+        shapes[i].setRotation(r);
        }
        if(keyCode == LEFT) {
-         shapes[i].setRotation(-0.01);
+         r-=0.01;
+         shapes[i].setRotation(r);
        }
      }
     }
@@ -162,6 +165,8 @@ void mousePressed() {
   if (buttonreset.overRect()) {
     for ( int i = 0; i < total; i++) {
       PVector p = new PVector (stepx,  10+i*stepy);
+      shapes[i].setScale(new PVector(1.0, 1.0));
+      shapes[i].mrotation= 0; 
       shapes[i].setLocation(p);
     }
   }
